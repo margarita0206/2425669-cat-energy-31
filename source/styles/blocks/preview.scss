@@ -4,6 +4,7 @@
   padding: 0;
 }
 
+
 .preview__item--slim {
   background-color: $bg-accent-color;
 }
@@ -11,6 +12,7 @@
 .preview__item--pro {
   background-color: $bg-accent-color;
 }
+
 
 .preview__title {
   @include font($secondary-font, 24px, 37px, $head-color);
