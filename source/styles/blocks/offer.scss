@@ -1,0 +1,20 @@
+.offer {
+  background-image:
+    image-set(
+      url("../../images/catalog-mobile-cat@1x.jpg") 1x,
+      url("../../images/catalog-mobile-cat@2x.jpg") 2x
+    );
+  background-repeat: no-repeat;
+  text-align: center;
+  width: 280px;
+  min-height: 290px;
+  background-size: cover;
+}
+
+.offer__gift {
+  @include font($primary-font, 16px, 20px, $white-text);
+  text-align: center;
+  background-color: $color-opacity-green;
+  width: 280px;
+  min-height: 290px;
+}

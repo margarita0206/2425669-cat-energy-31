@@ -1,0 +1,32 @@
+.stats {
+  background-color: $bg-accent-color;
+}
+
+.stats__feedback {
+  @include font($secondary-font, 36px, 40px, $head-color);
+  font-weight: 400;
+}
+
+.stats__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.stats__statistics {
+  @include font($primary-font, 14px, 18px, $base-color-text);
+}
+
+.stats__number {
+  @include font($secondary-font, 24px, 24px, $head-color);
+}
+
+.stats__description {
+  @include font($primary-font, 12px, 12px, $base-color-text);
+}
+
+.stats__total-cost {
+  @include font($secondary-font, 14px, 20px, $head-color);
+  text-align: center;
+  text-transform: uppercase;
+}

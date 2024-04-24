@@ -1,0 +1,9 @@
+.all__offer {
+  @include font($secondary-font, 24px, 24px, $head-color);
+  font-weight: 400;
+}
+
+.all__text {
+  @include font($secondary-font, 16px, 24px, $head-color);
+  text-align: center;
+}

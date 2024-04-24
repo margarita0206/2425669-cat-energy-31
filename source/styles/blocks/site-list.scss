@@ -1,0 +1,11 @@
+.site-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-list__link {
+  @include font($secondary-font, 18px, 24px, $head-color);
+  text-decoration: none;
+  text-transform: uppercase;
+}

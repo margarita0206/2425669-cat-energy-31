@@ -1,0 +1,13 @@
+.adress-wrapper--background {
+  background-color: $bg-accent-color;
+}
+
+.adress-wrapper__slogan {
+  @include font($secondary-font, 14px, 14px, $head-color);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.adress-wrapper__text {
+  @include font($primary-font, 14px, 20px, $base-color-text);
+}

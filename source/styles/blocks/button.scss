@@ -1,0 +1,16 @@
+.button {
+  @include font($secondary-font, 16px, 20px, $white-text);
+  font-weight: 400;
+  background-color: $bg-basic-green;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  text-align: center;
+  display: block;
+  padding: 10px;
+}
+
+.button--secondary {
+  background-color: $bg-accent-color;
+  color: $base-color-text;
+}

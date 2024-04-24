@@ -17,8 +17,12 @@
   <header class="main-header">
     <div class="main-logo">
       <a class="main-logo__link" href="index.html">
-        <img class="main-logo__image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип компании Cat energy">
-        <img class="main-logo__name" src="images/logo-2.svg" width="101" height="18" alt="Логотип Cat energy">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="70" height="59" type="image/svg+xml">
+          <source media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="60" height="50" type="image/svg+xml">
+          <img class="main-logo__image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип компании Cat energy">
+        </picture>
+        <img class="main-logo__name" src="images/logo-text.svg" width="101" height="18" alt="Логотип Cat energy">
       </a>
     </div>
     <nav class="main-nav">
@@ -45,23 +49,23 @@
       <h1 class="catalog__container-products">Каталог продукции</h1>
       <ul class="catalog__list">
         <li class="catalog__item card">
-          <a class="card__link" href="#">
+          <a class="card__link-img" href="#">
             <picture>
               <source width="169" height="210" type="image/png" media="(min-width: 1440px)" srcset="images/chicken-desktop@1x.png 1x, images/chicken-desktop@2x.png 2x">
               <source width="200" height="210" type="image/png" media="(min-width: 768px)" srcset="images/chicken-tablet@1x.png 1x, images/chicken-tablet@2x.png 2x">
-              <img class="card__picture" src="images/chicken-mobile@1x.png" srcset="images/chicken-mobile@2x.png" width="140" height="107" alt="Банка со вкусом курицы 500 грамм">
+              <img class="card__picture" src="images/chicken-mobile@1x.png" srcset="images/chicken-mobile@2x.png 2x" width="140" height="107" alt="Банка со вкусом курицы 500 грамм">
             </picture>
           </a>
           <a class="card__link" href="#">
             <h3 class="card__title">Cat Energy PRO 500 г</h3>
           </a>
           <dl class="card__options">
-            <dt class="card__massa">Масса</dt>
-            <dd class="card__gram">500 г</dd>
-            <dt class="card__taste">Вкус</dt>
-            <dd class="card__taste-value">Курица</dd>
-            <dt class="card__price">Цена</dt>
-            <dd class="card__cost">700 &#8381;</dd>
+            <dt class="card__option">Масса</dt>
+            <dd class="card__value">500 г</dd>
+            <dt class="card__option">Вкус</dt>
+            <dd class="card__value">Курица</dd>
+            <dt class="card__option">Цена</dt>
+            <dd class="card__value">700 &#8381;</dd>
           </dl>
           <a class="card__button button" href="#">Заказать</a>
         </li>
@@ -70,7 +74,7 @@
             <picture>
               <source width="169" height="210" type="image/png" media="(min-width: 1440px)" srcset="images/chicken-desktop-big@1x.png 1x, images/chicken-desktop-big@2x.png 2x">
               <source width="200" height="210" type="image/png" media="(min-width: 768px)" srcset="images/chicken-big-tablet@1x.png 1x, images/chicken-big-tablet@2x.png 2x">
-              <img class="card__picture" src="images/chicken-mobile@1x.png" srcset="images/chicken-mobile@2x.png" width="140" height="107" alt="Банка со вкусом курицы 1000 грамм">
+              <img class="card__picture" src="images/chicken-mobile@1x.png" srcset="images/chicken-mobile@2x.png 2x" width="140" height="107" alt="Банка со вкусом курицы 1000 грамм">
             </picture>
           </a>
           <a class="card__link" href="#">
@@ -91,7 +95,7 @@
             <picture>
               <source width="169" height="210" type="image/png" media="(min-width: 1440px)" srcset="images/fish-desktop@1x.png 1x, images/fish-desktop@2x.png 2x">
               <source width="200" height="210" type="image/png" media="(min-width: 768px)" srcset="images/fish-tablet@1x.png 1x, images/fish-tablet@2x.png 2x">
-              <img class="card__picture" src="images/fish-mobile@1x.png" srcset="images/fish-mobile@2x.png" width="140" height="107" alt="Банка со вкусом рыбы 500 грамм">
+              <img class="card__picture" src="images/fish-mobile@1x.png" srcset="images/fish-mobile@2x.png 2x" width="140" height="107" alt="Банка со вкусом рыбы 500 грамм">
             </picture>
           </a>
           <a class="card__link" href="#">
@@ -112,7 +116,7 @@
             <picture>
               <source width="169" height="210" type="image/png" media="(min-width: 1440px)" srcset="images/fish-desktop-big@1x.png 1x, images/fish-desktop-big@2x.png 2x">
               <source width="200" height="210" type="image/png" media="(min-width: 768px)" srcset="images/fish-tablet-big@1x.png 1x, images/fish-tablet-big@2x.png 2x">
-              <img class="card__picture" src="images/fish-big-mobile@1x.png" srcset="images/fish-big-mobile@2x.png" width="140" height="107" alt="Банка со вкусом рыбы 1000 грамм">
+              <img class="card__picture" src="images/fish-big-mobile@1x.png" srcset="images/fish-big-mobile@2x.png 2x" width="140" height="107" alt="Банка со вкусом рыбы 1000 грамм">
             </picture>
           </a>
           <a class="card__link" href="#">
@@ -133,7 +137,7 @@
             <picture>
               <source width="169" height="210" type="image/png" media="(min-width: 1440px)" srcset="images/grechka-desktop@1x.png 1x, images/grechka-desktop@2x.png 2x">
               <source width="200" height="210" type="image/png" media="(min-width: 768px)" srcset="images/grechka-tablet@1x.png 1x, images/grechka-tablet@2x.png 2x">
-              <img class=" card__picture" src="images/grecha-mobile@1x.png" srcset="images/grecha-mobile@2x.png" width="140" height="107" alt="Банка со вкусом гречки 500 грамм">
+              <img class=" card__picture" src="images/grecha-mobile@1x.png" srcset="images/grecha-mobile@2x.png 2x" width="140" height="107" alt="Банка со вкусом гречки 500 грамм">
             </picture>
           </a>
           <a class="card__link" href="#">
@@ -154,7 +158,7 @@
             <picture>
               <source width="169" height="210" type="image/png" media="(min-width: 1440px)" srcset="images/grechka-desktop-big@1x.png 1x, images/grechka-desktop-big@2x.png 2x">
               <source width="200" height="210" type="image/png" media="(min-width: 768px)" srcset="images/grechka-big-tablet@1x.png 1x, images/grechka-big-tablet@2x.png 2x">
-              <img class="card__picture" src="images/grecha-big-mobile@1x.png" srcset="images/grecha-big-mobile@2x.png" width="140" height="107" alt="Банка со вкусом гречки 1000 грамм">
+              <img class="card__picture" src="images/grecha-big-mobile@1x.png" srcset="images/grecha-big-mobile@2x.png 2x" width="140" height="107" alt="Банка со вкусом гречки 1000 грамм">
             </picture>
           </a>
           <a class="card__link" href="#">
@@ -175,7 +179,7 @@
             <picture>
               <source width="169" height="210" type="image/png" media="(min-width: 1440px)" srcset="images/ris-desktop@1x.png 1x, images/ris-desktop@2x.png 2x">
               <source width="200" height="210" type="image/png" media="(min-width: 768px)" srcset="images/ris-tablet@1x.png 1x, images/ris-tablet@2x.png 2x">
-              <img class="card__picture" src="images/slim-ris-mobile@1x.png" srcset="images/slim-ris-mobile@2x.png" width="140" height="107" alt="Банка со вкусом риса 500 грамм">
+              <img class="card__picture" src="images/slim-ris-mobile@1x.png" srcset="images/slim-ris-mobile@2x.png 2x" width="140" height="107" alt="Банка со вкусом риса 500 грамм">
             </picture>
           </a>
           <a class="card__link" href="#">
@@ -195,7 +199,7 @@
           <div class="card__options">
             <h3 class="card__title">Показать еще 100500 товаров</h3>
             <p class="card__text">На самом деле вкусов гораздо больше!</p>
-            <a class="card__button button button--secondary" href="#">Заказать</a>
+            <a class="card__button button button--secondary" href="#">показать все</a>
           </div>
         </li>
       </ul>
@@ -213,7 +217,7 @@
           <li class="additional__item">
             <h3 class="additional__name">Питьевая вода</h3>
             <span class="additional__quantity">5 литров</span>
-            <span class="additional__price">50 ?</span>
+            <span class="additional__price">50 &#8381;</span>
             <a class="additional__button button" href="#">заказать</a>
           </li>
           <li class="additional__item">
@@ -229,7 +233,9 @@
             <a class="additional__button button" href="#">заказать</a>
           </li>
         </ul>
-        <p class="additional__gift">Закажите все и получите чехол для кота в подарок!</p>
+        <div class="offer">
+          <p class="offer__gift">Закажите все и получите чехол для кота в подарок!</p>
+        </div>
       </div>
     </section>
     <section class="all">
@@ -237,27 +243,28 @@
       <p class="all__text">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
       <div class="form">
         <form class="form__all" action="https://echo.htmlacademy.ru" method="post">
-          <label class="visually-hidden">Введите ваш email
-            <input class="form__input" type="email" name="email" id="email" placeholder="кuklachev@gmail.com" required>
-          </label>
+          <label class="visually-hidden" for="email">Введите ваш email</label>
+          <input class="form__input" type="email" name="email" id="email" placeholder="кuklachev@gmail.com" required>
+
           <button class="form__button button" type="submit">Подписаться</button>
         </form>
       </div>
     </section>
     <section class="adress">
-      <div class="adress-wrapper">
-        <h2 class="adress-wrapper__slogan">приглашаем к сотрудничеству дилеров!</h2>
+      <div class="adress-wrapper adress-wrapper--background">
+        <h2 class="visually-hidden">Контактная информация</h2>
+        <p class="adress-wrapper__slogan">приглашаем к сотрудничеству дилеров!</p>
         <p class="adress-wrapper__text">ул. Большая<br>Конюшенная, д. 19/8<br>Санкт-Петербург</p>
       </div>
       <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3018932694903!2d30.321759938974047!3d59.938716493728826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1712826306845!5m2!1sru!2sru" width="600" height="450" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3018932694903!2d30.321759938974047!3d59.938716493728826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1712826306845!5m2!1sru!2sru" width="320" height="362" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
   </main>
   <footer class="main-footer">
     <div class="main-logo">
       <a class="main-logo__link" href="index.html">
-        <img class="main-logo__name" src="images/logo-2.svg" width="101" height="18" alt="Логотип Cat energy">
+        <img class="main-logo__name" src="images/logo-text.svg" width="101" height="18" alt="Логотип Cat energy">
       </a>
     </div>
     <div class="main-footer__social">
