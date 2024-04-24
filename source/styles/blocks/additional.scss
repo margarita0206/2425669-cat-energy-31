@@ -1,0 +1,29 @@
+.additional__text {
+  @include font($secondary-font, 24px, 24px, $head-color);
+  font-weight: 400;
+}
+
+.additional__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.additional__name {
+  @include font($secondary-font, 16px, 16px, $card-color);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.additional__quantity {
+  @include font($primary-font, 14px, 14px, $base-color-text);
+}
+
+.additional__price {
+  @include font($primary-font, 14px, 14px, $base-color-text);
+}
+
+.additional__button {
+  max-width: 280px;
+  min-height: 40px;
+}

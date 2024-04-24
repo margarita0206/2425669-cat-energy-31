@@ -1,0 +1,12 @@
+.form__input {
+  @include font( $secondary-font, 20px, 30px, $base-color-text);
+  text-transform: uppercase;
+  padding: 10px 0;
+  min-width: 280px;
+}
+
+.form__button {
+  padding: 15px 0;
+  min-width: 280px;
+  min-height: 56px;
+}

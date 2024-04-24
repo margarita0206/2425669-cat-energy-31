@@ -1,0 +1,13 @@
+.advantages__list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.advantages__title {
+  @include font($secondary-font, 36px, 40px, $head-color);
+  font-weight: 400;
+}
+
+.advantages__text {
+  @include font($primary-font, 14px, 18px, $base-color-text);
+}

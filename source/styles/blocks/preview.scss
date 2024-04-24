@@ -1,0 +1,30 @@
+.preview__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.preview--slim {
+  background-color: $bg-accent-color;
+}
+
+.preview--pro {
+  background-color: $bg-accent-color;
+}
+
+.preview__title {
+  @include font($secondary-font, 24px, 37px, $head-color);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.preview__text {
+  @include font($primary-font, 14px, 14px, $base-color-text);
+}
+
+
+.preview__link {
+  @include font($secondary-font, 16px, 16px, $head-color);
+  text-transform: uppercase;
+  text-decoration: none;
+}
