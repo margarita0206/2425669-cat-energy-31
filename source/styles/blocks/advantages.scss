@@ -8,6 +8,32 @@
   font-weight: 400;
 }
 
-.advantages__text {
+.advantages__item {
   @include font($primary-font, 14px, 18px, $base-color-text);
+  margin-bottom: 20px;
+}
+
+.advantages__item-one {
+  background-color: $bg-basic-green;
+  background-image: url("../../icons/stack.svg#advantages-one");
+  background-repeat: no-repeat;
+}
+
+.advantages__item-two {
+  background-color: $bg-basic-green;
+  background-image: url("../../icons/stack.svg#advantages-two");
+  background-repeat: no-repeat;
+}
+
+.advantages__item-free {
+  background-color: $bg-basic-green;
+  background-image: url("../../icons/stack.svg#advantages-free");
+  background-repeat: no-repeat;
+}
+
+.advantages__item-for {
+  background-color: $bg-basic-green;
+  background-image: url("../../icons/stack.svg#advantages-for");
+  background-repeat: no-repeat;
+  background-position: left;
 }
