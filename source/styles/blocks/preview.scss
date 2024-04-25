@@ -13,6 +13,7 @@
   background-color: $bg-accent-color;
 }
 
+
 .preview__title {
   @include font($secondary-font, 24px, 37px, $head-color);
   font-weight: 400;
