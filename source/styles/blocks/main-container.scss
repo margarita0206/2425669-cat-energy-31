@@ -1,1 +1,12 @@
+.main-container__hero {
+  max-height: 480px;
 
+
+  @media (min-width: $tablet-width) {
+    max-height: 810px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-height: 604px;
+  }
+}

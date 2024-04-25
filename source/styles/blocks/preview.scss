@@ -13,20 +13,39 @@
   background-color: $bg-accent-color;
 }
 
-
 .preview__title {
   @include font($secondary-font, 24px, 37px, $head-color);
   font-weight: 400;
   text-transform: uppercase;
+  padding: 30px 10px 29px 70px;
+  margin: 0;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 
 .preview__text {
   @include font($primary-font, 14px, 14px, $base-color-text);
+  margin: 0;
+  padding: 0 33px 38px 20px;
 }
-
 
 .preview__link {
   @include font($secondary-font, 16px, 16px, $head-color);
   text-transform: uppercase;
   text-decoration: none;
+  padding-left: 20px;
+}
+
+.preview__title--slim {
+  background-image: url("../../icons/stack.svg#cat-slim");
+  background-size: 50px 53px;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+.preview__title--pro {
+  background-image: url("../../icons/stack.svg#cat-pro");
+  background-size: 67px 50px;
+  background-repeat: no-repeat;
+  background-position: left;
 }
