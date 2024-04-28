@@ -10,7 +10,32 @@
   padding: 10px;
 }
 
+.button:hover {
+  background-color: #5eaa2f;
+}
+
+.button:focus-visible {
+  background-color: #5eaa2f;
+}
+
+.button:active {
+  background-color: #5eaa2f;
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .button--secondary {
   background-color: $bg-accent-color;
   color: $base-color-text;
+}
+
+.button--secondary:hover {
+  background-color: #ebebeb;
+}
+
+.button--secondary:focus-visible {
+  background-color: #ebebeb;
+}
+
+.button--secondary:active {
+  background-color: #ebebeb;
 }

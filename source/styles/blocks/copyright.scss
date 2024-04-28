@@ -1,4 +1,29 @@
-.copyright__link {
+.copyright {
   @include font($primary-font, 16px, 20px, $base-color-text);
   text-decoration: none;
+  display: flex;
+  gap: 140px;
+}
+
+.copyright__logo-icon::after {
+  content: "";
+  display: block;
+  width: 27px;
+  height: 34px;
+  background-color: #666666;
+  mask-image: url("../../icons/stack.svg#html-academy");
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.copyright__logo-icon:hover::after {
+  background-color: $bg-basic-green;
+}
+
+.copyright__logo-icon:hover:focus-visible {
+  background-color: $bg-basic-green;
+}
+
+.copyright:active {
+  opacity: 0.3;
 }
