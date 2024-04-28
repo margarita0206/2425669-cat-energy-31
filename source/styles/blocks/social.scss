@@ -33,3 +33,16 @@
   mask-position: center;
   background-color: #666666;
 }
+
+.social__link:hover {
+  background-color: $bg-basic-green;
+}
+
+.social__link:focus-visible {
+  background-color: $bg-basic-green;
+}
+
+.social__link:active {
+  opacity: 0.3;
+}
+

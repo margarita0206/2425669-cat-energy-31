@@ -17,4 +17,21 @@
   background-color: $color-opacity-green;
   width: 280px;
   min-height: 290px;
+  padding-top: 186px;
+  position: relative;
+  display: block;
 }
+
+.offer__gift::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 78px;
+  height: 80px;
+  background-image: url("../../icons/stack.svg#icon_podarok");
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 50px;
+  right: 100px;
+}
+

@@ -18,6 +18,29 @@
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
+  position: relative;
+  display: block;
+}
+
+.card__title--secondary::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #d3d3d3;
+  mask-image: url("../../icons/stack.svg#plus");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  cursor: pointer;
+}
+
+.card__title--secondary:hover::before {
+  opacity: 0.3;
+}
+
+.card__title--secondary:active::before {
+  opacity: 0.2;
 }
 
 .card__text {

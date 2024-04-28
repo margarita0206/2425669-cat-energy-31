@@ -2,10 +2,23 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .site-list__link {
   @include font($secondary-font, 18px, 24px, $head-color);
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.site-list__link:hover {
+  opacity: 0.6;
+}
+
+.site-list__link:focus-visible {
+  opacity: 0.3;
 }
