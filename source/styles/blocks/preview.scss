@@ -36,6 +36,7 @@
   @include font($primary-font, 14px, 18px, $base-color-text);
   margin: 0;
   padding-bottom: 38px;
+}
 
 .preview__link {
   @include font($secondary-font, 16px, 16px, $head-color);
