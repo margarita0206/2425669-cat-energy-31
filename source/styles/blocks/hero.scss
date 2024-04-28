@@ -58,6 +58,7 @@
 
   @media (min-width: $desktop-width) {
     padding: 110px 726px 40px 190px;
+    @include font($secondary-font, 36px, 36px, $head-color);
   }
 }
 
