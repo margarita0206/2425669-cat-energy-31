@@ -30,7 +30,6 @@
   }
 }
 
-
 .hero__title {
   @include font($secondary-font, 36px, 36px, $white-text);
   font-weight: 400;
@@ -46,6 +45,7 @@
 
   @media (min-width: $desktop-width) {
     @include font($secondary-font, 36px, 36px, $head-color);
+  }
 }
 
 .hero__intro {
