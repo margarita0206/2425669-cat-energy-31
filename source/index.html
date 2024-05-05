@@ -15,27 +15,27 @@
 
 <body class="page__body">
   <header class="main-header">
-    <div class="main-logo">
-      <a class="main-logo__link" href="index.html">
+    <div class="main-header__wrapper">
+      <a class="main-header__logo logo" href="index.html">
         <picture>
           <source media="(min-width: 1440px)" width="70" height="59" srcset=" images/logo-desktop.svg" type="image/svg+xml">
           <source media="(min-width: 768px)" width="60" height="50" srcset="images/logo-tablet.svg" type="image/svg+xml">
-          <img class="main-logo__image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип компании Cat energy">
+          <img class="logo__image" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип компании Cat energy">
         </picture>
-        <img class="main-logo__name" src="images/logo-text.svg" width="101" height="18" alt="Логотип Cat energy">
+        <img class="logo__name" src="images/logo-text.svg" width="101" height="18" alt="Логотип Cat energy">
       </a>
-    </div>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">
+      <button class="main-header__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
+    </div>
+    <nav class="main-nav">
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--current">
             <a class="site-list__link site-list__link--current" href="#">главная</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link" href="catalog.html">каталог продукции</a>
+            <a class="site-list__link " href="catalog.html">каталог продукции</a>
           </li>
           <li class="site-list__item">
             <a class="site-list__link" href="#">подбор программы</a>
@@ -73,54 +73,63 @@
       </ul>
     </section>
     <section class="advantages">
-      <h2 class="advantages__title">Как это работает</h2>
-      <ol class="advantages__list">
-        <li class="advantages__item advantages__item-one">Функциональное питание<br>содержит только полезные<br>питательные вещества.</li>
-        <li class="advantages__item advantages__item-two">Выпускается в виде порошка,<br>который нужно лишь залить<br>кипятком и готово.</li>
-        <li class="advantages__item advantages__item-free">Замените один-два приема<br>обычной еды на наше<br>функциональное питание.</li>
-        <li class="advantages__item advantages__item-for">Уже через месяц<br>наслаждайтесь изменениями<br>к лучшему вашего питомца!</li>
-      </ol>
+      <div class="advantages__wrapper">
+        <h2 class="advantages__title">Как это работает</h2>
+        <ol class="advantages__list">
+          <li class="advantages__item advantages__item-one">Функциональное питание содержит только полезные питательные вещества.</li>
+          <li class="advantages__item advantages__item-two">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
+          <li class="advantages__item advantages__item-free">Замените один-два приема обычной еды на наше функциональное питание.</li>
+          <li class="advantages__item advantages__item-for">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
+        </ol>
+      </div>
     </section>
     <section class="stats">
       <h2 class="stats__feedback">Живой пример</h2>
       <p class="stats__statistics">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-      <dl class="stats__list">
-        <div class="stats__item">
-          <dt class="stats__number">5 КГ</dt>
-          <dd class="stats__description">снижение веса</dd>
-        </div>
-        <div class="stats__item">
-          <dt class="stats__number">60 ДНЕЙ</dt>
-          <dd class="stats__description">затрачено времени</dd>
-        </div>
-      </dl>
-      <p class="stats__total-cost">Затраты на питание: 15 000 РУБ.</p>
+      <div class="stats__wrapper">
+        <dl class="stats__list">
+          <div class="stats__item">
+            <dt class="stats__number">5 КГ</dt>
+            <dd class="stats__description">снижение<br> веса</dd>
+          </div>
+          <div class="stats__item">
+            <dt class="stats__number">60 ДНЕЙ</dt>
+            <dd class="stats__description">затрачено<br> времени</dd>
+          </div>
+        </dl>
+        <p class="stats__total-cost">Затраты на питание: 15 000 РУБ.</p>
+      </div>
       <div class="slider">
-        <picture>
-          <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/cat-tablet-before@1x.png 1x, images/cat-tablet-before@2x.png 2x">
-          <img class="slider__foto-before" src="images/cat-mobile-before@1x.png" srcset="images/cat-mobile-before@2x.png 2x" width="280" height="256" alt="Кот Борис До похудения">
-        </picture>
-        <picture>
-          <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/cat-tablet-after@1x.png 1x, images/cat-tablet-after@2x.png 2x">
-          <img class="slider__foto-after" src="images/cat-mobile-after@1x.png" srcset="images/cat-mobile-after@2x.png 2x" width="280" height="256" alt="Кот Борис После похудения">
-        </picture>
+        <div class="slider__wrapper slider__wrapper-before">
+          <picture>
+            <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/cat-tablet-before@1x.png 1x, images/cat-tablet-before@2x.png 2x">
+            <img class="slider__foto-before" src="images/cat-mobile-before@1x.png" srcset="images/cat-mobile-before@2x.png 2x" width="280" height="256" alt="Кот Борис До похудения">
+          </picture>
+        </div>
+        <div class="slider__wrapper slider__wrapper-after">
+          <picture>
+            <source width="560" height="512" type="image/png" media="(min-width: 768px)" srcset="images/cat-tablet-after@1x.png 1x, images/cat-tablet-after@2x.png 2x">
+            <img class="slider__foto-after" src="images/cat-mobile-after@1x.png" srcset="images/cat-mobile-after@2x.png 2x" width="280" height="256" alt="Кот Борис После похудения">
+          </picture>
+        </div>
+        <button class="slider__curtain" type="button"><span class="visually-hidden">Передвинуть ползунок слайдера</span></button>
       </div>
     </section>
     <section class="adress">
-      <div class="adress-wrapper">
+      <div class="adress__wrapper">
         <h2 class="visually-hidden">Контактная информация</h2>
-        <p class="adress-wrapper__slogan">приглашаем к сотрудничеству дилеров!</p>
-        <p class="adress-wrapper__text">ул. Большая<br>Конюшенная, д. 19/8<br>Санкт-Петербург</p>
+        <p class="adress__slogan">приглашаем<br> к сотрудничеству<br> дилеров!</p>
+        <p class="adress__text">ул. Большая<br>Конюшенная, д. 19/8<br>Санкт-Петербург</p>
       </div>
       <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3018932694903!2d30.321759938974047!3d59.938716493728826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1712826306845!5m2!1sru!2sru" width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3018932694903!2d30.321759938974047!3d59.938716493728826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1712826306845!5m2!1sru!2sru" width="100%" height="362" style="height:100vh;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
   </main>
   <footer class="main-footer">
-    <div class="main-logo">
-      <a class="main-logo__link" href="index.html">
-        <img class="main-logo__name" src="images/logo-text.svg" width="101" height="18" alt="Логотип Cat energy">
+    <div class="main-footer__logo logo">
+      <a class="logo__link-footer" href="index.html">
+        <img class="logo__name" src="images/logo-text.svg" width="128" height="24" alt="Логотип Cat energy">
       </a>
     </div>
     <div class="main-footer__social social">

@@ -1,13 +1,35 @@
-.adress-wrapper--background {
+.adress__wrapper {
+  min-width: 280px;
+  margin: 0 auto;
+  padding: 26px 20px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    padding: 61px 70px;
+  }
+}
+
+.adress__wrapper--background {
   background-color: $bg-accent-color;
 }
 
-.adress-wrapper__slogan {
-  @include font($secondary-font, 14px, 14px, $head-color);
+.adress__slogan {
+  @include font($secondary-font, 16px, 20px, $head-color);
   font-weight: 400;
   text-transform: uppercase;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    @include font($secondary-font, 20px, 26px, $head-color);
+  }
 }
 
-.adress-wrapper__text {
+.adress__text {
   @include font($primary-font, 14px, 20px, $base-color-text);
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    @include font($primary-font, 16px, 20px, $base-color-text);
+  }
 }

@@ -1,8 +1,15 @@
 .social__list {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 20px 74px;
   display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
 }
 
 .social__link {
@@ -46,3 +53,11 @@
   opacity: 0.3;
 }
 
+.main-footer__social {
+  min-width: 280px;
+  border-bottom: 1px solid #d9d9d9;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
+}

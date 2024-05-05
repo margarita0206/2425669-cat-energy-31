@@ -1,9 +1,17 @@
+.all {
+  padding: 40px 20px;
+}
+
 .all__offer {
   @include font($secondary-font, 24px, 24px, $head-color);
   font-weight: 400;
+  margin: 0;
+  padding-bottom: 32px;
 }
 
 .all__text {
   @include font($secondary-font, 16px, 24px, $head-color);
   text-align: center;
+  margin: 0;
+  margin-bottom: 24px;
 }

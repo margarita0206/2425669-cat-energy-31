@@ -1,12 +1,44 @@
-.card__link {
-  @include font($secondary-font, 16px, 20px, $card-color);
-  margin: 0;
+.card {
+  display: grid;
+  grid-template-areas: "image title" "image options" "button button";
+  padding: 20px 20px 25px;
+  border-bottom: 1px solid #ebebeb;
+
+  &:first-child {
+    border-top: 1px solid #ebebeb;
+  }
+}
+
+.card__link-img {
   text-decoration: none;
-  text-transform: uppercase;
+  grid-area: image;
+}
+
+.card__link-name {
+  text-decoration: none;
+  grid-area: title;
+}
+
+.card__options {
+  margin: 0;
+  padding: 0;
+  grid-area: options;
+}
+
+.card__info {
+  display: flex;
+  justify-content: space-between;
 }
 
 .card__option {
   @include font($primary-font, 12px, 16px, $base-color-text);
+}
+
+.card__text {
+  @include font($primary-font, 12px, 16px, $base-color-text);
+  text-align: center;
+  margin: 0;
+  padding: 0 20px 21px;
 }
 
 .card__value {
@@ -14,12 +46,17 @@
 }
 
 .card__title {
-  @include font($secondary-font, 16px, 20px, #111111);
+  @include font($secondary-font, 16px, 20px, $card-color);
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
-  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.card__title--secondary {
   display: block;
+  padding: 78px 20px 8px;
 }
 
 .card__title--secondary::before {
@@ -33,6 +70,7 @@
   mask-repeat: no-repeat;
   mask-position: center;
   cursor: pointer;
+  transform: translateX(105px) translateY(-60px);
 }
 
 .card__title--secondary:hover::before {
@@ -43,12 +81,9 @@
   opacity: 0.2;
 }
 
-.card__text {
-  @include font($primary-font, 12px, 16px, $base-color-text);
-  text-align: center;
-}
-
 .card__button {
-  max-width: 280px;
-  max-height: 40px;
+  @include font($secondary-font, 16px, 20px, $white-text);
+  min-width: 280px;
+  min-height: 40px;
+  grid-area: button;
 }
