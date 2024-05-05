@@ -1,5 +1,4 @@
 .button {
-  @include font($secondary-font, 16px, 20px, $white-text);
   font-weight: 400;
   background-color: $bg-basic-green;
   text-transform: uppercase;
@@ -26,6 +25,8 @@
 .button--secondary {
   background-color: $bg-accent-color;
   color: $base-color-text;
+  min-width: 280px;
+  min-height: 40px;
 }
 
 .button--secondary:hover {

@@ -1,80 +1,95 @@
-.advantages {
-  width: 280px;
-  margin: 0 auto;
+.advantages__wrapper {
+  min-width: 280px;
+  margin: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    margin: 45px 30px 0;
+  }
 }
 
 .advantages__list {
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    display: flex;
+    gap: 37px 153px;
+    flex-wrap: wrap;
+  }
 }
 
 .advantages__title {
   @include font($secondary-font, 36px, 40px, $head-color);
   font-weight: 400;
+  margin: 0;
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    @include font($secondary-font, 60px, 60px, $head-color);
+  }
 }
 
 .advantages__item {
   @include font($primary-font, 14px, 18px, $base-color-text);
   margin-bottom: 20px;
-  position: relative;
+  display: flex;
+  gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    @include font($primary-font, 16px, 24px, $base-color-text);
+    width: 230px;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+  }
 }
 
-.advantages__item::before {
+.advantages__item-one::before {
   content: "";
   display: block;
-  width: 60px;
+  min-width: 60px;
   height: 60px;
   background-color: $bg-basic-green;
-}
-
-.advantages__item-one::after {
-  content: "";
-  position: absolute;
-  display: block;
-  min-width: 30px;
-  min-height: 32px;
   background-image: url("../../icons/stack.svg#advantages-one");
   background-repeat: no-repeat;
   background-position: center;
-  top: 14px;
-  left: 15px;
+  background-size: 30px 32px;
 }
 
-.advantages__item-two::after {
+.advantages__item-two::before {
   content: "";
-  position: absolute;
   display: block;
-  min-width: 26px;
-  min-height: 28px;
+  min-width: 60px;
+  height: 60px;
+  background-color: $bg-basic-green;
   background-image: url("../../icons/stack.svg#advantages-two");
   background-repeat: no-repeat;
   background-position: center;
-  top: 14px;
-  left: 15px;
+  background-size: 26px 28px;
 }
 
-.advantages__item-free::after {
+.advantages__item-free::before {
   content: "";
-  position: absolute;
   display: block;
-  min-width: 25px;
-  min-height: 30px;
+  min-width: 60px;
+  height: 60px;
+  background-color: $bg-basic-green;
   background-image: url("../../icons/stack.svg#advantages-free");
   background-repeat: no-repeat;
   background-position: center;
-  top: 14px;
-  left: 16px;
+  background-size: 25px 30px;
 }
 
-.advantages__item-for::after {
+.advantages__item-for::before {
   content: "";
-  position: absolute;
   display: block;
-  min-width: 26px;
-  min-height: 31px;
+  min-width: 60px;
+  height: 60px;
+  background-color: $bg-basic-green;
   background-image: url("../../icons/stack.svg#advantages-for");
   background-repeat: no-repeat;
   background-position: center;
-  top: 14px;
-  left: 16px;
+  background-size: 26px 31px;
 }

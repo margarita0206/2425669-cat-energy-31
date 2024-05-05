@@ -1,32 +1,79 @@
 .stats {
   background-color: $bg-accent-color;
+  min-width: 280px;
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    background-color: #ffffff;
+  }
 }
 
 .stats__feedback {
   @include font($secondary-font, 36px, 40px, $head-color);
   font-weight: 400;
+
+  @media (min-width: $tablet-width) {
+    @include font($secondary-font, 60px, 60px, $head-color);
+  }
 }
 
 .stats__list {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  text-align: center;
 }
 
 .stats__statistics {
   @include font($primary-font, 14px, 18px, $base-color-text);
+  margin: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    @include font($primary-font, 16px, 24px, $base-color-text);
+    padding-bottom: 55px;
+  }
 }
 
 .stats__number {
   @include font($secondary-font, 24px, 24px, $head-color);
+  margin-bottom: 17px;
+
+  @media (min-width: $tablet-width) {
+    @include font($secondary-font, 30px, 37px, $head-color);
+  }
 }
 
 .stats__description {
   @include font($primary-font, 12px, 12px, $base-color-text);
+
+  @media (min-width: $tablet-width) {
+    @include font($primary-font, 14px, 14px, $base-color-text);
+  }
 }
 
 .stats__total-cost {
   @include font($secondary-font, 14px, 20px, $head-color);
   text-align: center;
   text-transform: uppercase;
+  margin: 0;
+  padding: 20px 0;
+
+  @media (min-width: $tablet-width) {
+    @include font($secondary-font, 20px, 20px, $head-color);
+    width: 174px;
+    min-height: 49px;
+    text-align: right;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .stats__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 99px;
+  }
 }

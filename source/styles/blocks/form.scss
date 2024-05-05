@@ -1,11 +1,17 @@
+.form-all {
+  min-width: 280px;
+}
+
 .form__input {
   @include font( $secondary-font, 20px, 30px, $base-color-text);
   text-transform: uppercase;
   padding: 10px 0;
   min-width: 280px;
+  margin-bottom: 16px;
 }
 
 .form__button {
+  @include font($secondary-font, 20px, 26px, $white-text);
   padding: 15px 0;
   min-width: 280px;
   min-height: 56px;

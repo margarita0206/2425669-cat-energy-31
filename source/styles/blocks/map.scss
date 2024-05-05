@@ -1,0 +1,10 @@
+.map {
+  background-image:
+    image-set(
+      url("../../images/map@1x.jpg") type("image/jpg") 1x,
+      url("../../images/map@2x.jpg") type("image/jpg") 2x
+    );
+  background-repeat: no-repeat;
+  background-position: 50% 0, 50% 0;
+  background-size: cover, auto 302px;
+}

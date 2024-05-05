@@ -2,7 +2,14 @@
   @include font($primary-font, 16px, 20px, $base-color-text);
   text-decoration: none;
   display: flex;
+  justify-content: center;
   gap: 140px;
+  padding: 20px 0 40px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    gap: 23px;
+  }
 }
 
 .copyright__logo-icon::after {
