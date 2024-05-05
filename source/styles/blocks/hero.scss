@@ -1,7 +1,12 @@
 .hero__wrapper {
   background-image:
     linear-gradient(to bottom, $color-opacity-green 302px, #666666 302px),
+    linear-gradient(to bottom, $color-opacity-green 302px, #666666 302px),
     image-set(
+      url("../../images/index-background-mobile@1x.webp") type("image/webp") 1x,
+      url("../../images/index-background-mobile@2x.webp") type("image/webp") 2x,
+      url("../../images/index-background-mobile@1x.jpg") type("image/jpg") 1x,
+      url("../../images/index-background-mobile@2x.jpg") type("image/jpg") 2x
       url("../../images/index-background-mobile@1x.webp") type("image/webp") 1x,
       url("../../images/index-background-mobile@2x.webp") type("image/webp") 2x,
       url("../../images/index-background-mobile@1x.jpg") type("image/jpg") 1x,
@@ -57,6 +62,7 @@
 
   @media (min-width: $tablet-width) {
     @include font($secondary-font, 20px, 20px, $head-color);
+    @include font($secondary-font, 20px, 20px, $head-color);
     text-align: left;
     padding: 0 20px 21px 120px;
   }
@@ -70,7 +76,6 @@
   margin: 0 20px;
   transform: translateY(-137px);
 
-
   @media (min-width: $tablet-width) {
     padding-left: 30px;
     padding-right: 29px;
@@ -83,6 +88,7 @@
 }
 
 .hero__link-button {
+  @include font($secondary-font, 16px, 20px, $white-text);
   @include font($secondary-font, 16px, 20px, $white-text);
   padding: 10px;
   max-width: 280px;

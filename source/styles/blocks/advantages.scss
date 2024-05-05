@@ -55,12 +55,8 @@
   background-image: url("../../icons/stack.svg#advantages-one");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 30px 32px;
-
-  @media (min-width: $tablet-width) {
-    width: 80px;
-    height: 80px;
-  }
+  top: 14px;
+  left: 15px;
 }
 
 .advantages__item-two::before {
@@ -72,12 +68,8 @@
   background-image: url("../../icons/stack.svg#advantages-two");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 26px 28px;
-
-  @media (min-width: $tablet-width) {
-    width: 80px;
-    height: 80px;
-  }
+  top: 14px;
+  left: 15px;
 }
 
 .advantages__item-free::before {
@@ -89,12 +81,8 @@
   background-image: url("../../icons/stack.svg#advantages-free");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 25px 30px;
-
-  @media (min-width: $tablet-width) {
-    width: 80px;
-    height: 80px;
-  }
+  top: 14px;
+  left: 16px;
 }
 
 .advantages__item-for::before {
@@ -106,10 +94,6 @@
   background-image: url("../../icons/stack.svg#advantages-for");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 26px 31px;
-
-  @media (min-width: $tablet-width) {
-    width: 80px;
-    height: 80px;
-  }
+  top: 14px;
+  left: 16px;
 }
