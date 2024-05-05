@@ -46,8 +46,6 @@
 
   @media (min-width: $desktop-width) {
     @include font($secondary-font, 36px, 36px, $head-color);
-    padding: 110px 726px 40px 188px;
-  }
 }
 
 .hero__intro {
