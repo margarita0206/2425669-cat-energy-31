@@ -1,18 +1,19 @@
 .copyright {
   @include font($primary-font, 16px, 20px, $base-color-text);
   text-decoration: none;
+  min-width: 280px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 140px;
-  padding: 20px 0 40px;
 
   @media (min-width: $tablet-width) {
+    min-width: 168px;
     padding: 0;
     gap: 23px;
   }
 }
 
-.copyright__logo-icon::after {
+.copyright::after {
   content: "";
   display: block;
   width: 27px;
@@ -20,14 +21,14 @@
   background-color: #666666;
   mask-image: url("../../icons/stack.svg#html-academy");
   mask-repeat: no-repeat;
-  mask-position: center;
+  mask-position: right;
 }
 
-.copyright__logo-icon:hover::after {
+.copyright:hover::after {
   background-color: $bg-basic-green;
 }
 
-.copyright__logo-icon:hover:focus-visible {
+.copyright:hover:focus-visible {
   background-color: $bg-basic-green;
 }
 

@@ -2,15 +2,17 @@
   background-color: $bg-accent-color;
   min-width: 280px;
   text-align: center;
-  padding: 0 20px;
+  padding: 0 20px 40px;
 
   @media (min-width: $tablet-width) {
-    padding: 55px 20px;
+    min-width: 768px;
+    padding: 55px 30px;
     display: flex;
     justify-content: space-between;
   }
 
   @media (min-width: $desktop-width) {
+    min-width: 1440px;
     padding: 66px 110px;
   }
 }

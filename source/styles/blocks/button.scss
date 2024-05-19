@@ -27,6 +27,15 @@
   color: $base-color-text;
   min-width: 280px;
   min-height: 40px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 250px;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 169px;
+  }
 }
 
 .button--secondary:hover {

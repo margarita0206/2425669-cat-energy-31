@@ -1,26 +1,100 @@
 .additional__wrapper {
   min-width: 280px;
-  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 708px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 325px;
+    grid-template-areas: "text text text" "list list image" "list list image";
+  }
 }
 
 .additional__text {
   @include font($secondary-font, 24px, 24px, $head-color);
   font-weight: 400;
-  border-bottom: 1px solid #cdcdcd;
   margin: 0;
-  padding-top: 25px;
-  padding-bottom: 36px;
+  padding: 25px 0 36px 20px;
+  width: fit-content;
+  background-color: #ffffff;
+  position: relative;
+  box-shadow: -40px 0 0 #ffffff, 40px 0 0 #ffffff;
+
+  @media (min-width: $tablet-width) {
+    @include font($secondary-font, 32px, 32px, $head-color);
+    padding: 74px 0 80px;
+    width: fit-content;
+    margin-left: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-area: text;
+    width: fit-content;
+    padding: 71px 0 80px;
+    margin: 0;
+  }
+}
+
+.additional__text::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  left: -50vw;
+  height: 2px;
+  background-color: $bg-basic-green;
+  box-shadow: 100vw 0 0 $bg-basic-green;
+  transform: translateY(18px);
 }
 
 .additional__list {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
+  border-bottom: 1px solid #cdcdcd;
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 896px;
+    grid-area: list;
+    padding: 0;
+  }
 }
 
 .additional__item {
-  padding-bottom: 20px;
-  border-bottom: 1px solid #cdcdcd;
+  @media (min-width: $tablet-width) {
+    padding: 26px 38px 25px;
+    border-top: 1px solid #cdcdcd;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px 0;
+  }
+}
+
+.additional__item-wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
 }
 
 .additional__name {
@@ -29,24 +103,69 @@
   text-transform: uppercase;
   margin: 0;
   padding: 13px 0;
+  border-top: 1px solid #cdcdcd;
+
+  @media (min-width: $tablet-width) {
+    @include font($secondary-font, 20px, 20px, $card-color);
+    border: none;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 325px;
+    padding-top: 10px;
+  }
 }
 
 .additional__quantity {
   @include font($primary-font, 14px, 14px, $base-color-text);
+
+  @media (min-width: $tablet-width) {
+    @include font($primary-font, 16px, 20px, $base-color-text);
+  }
 }
 
 .additional__price {
   @include font($primary-font, 14px, 14px, $base-color-text);
+
+  @media (min-width: $tablet-width) {
+    @include font($primary-font, 16px, 20px, $base-color-text);
+  }
 }
 
 .additional__separator {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 15px;
+  padding-bottom: 12px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    gap: 49px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 285px;
+    gap: none;
+    padding-top: 10px;
+  }
 }
 
 .additional__button {
   @include font($secondary-font, 16px, 20px, $white-text);
   min-width: 280px;
   min-height: 40px;
+  margin-bottom: 20px;
+
+  &__button:last-child {
+    margin: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    min-width: 244px;
+  }
 }

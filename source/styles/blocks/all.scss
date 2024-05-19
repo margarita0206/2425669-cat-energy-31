@@ -1,5 +1,18 @@
 .all {
+  min-width: 320px;
+  margin: 0 auto;
   padding: 40px 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 708px;
+    margin: 0 auto;
+    padding: 80px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+    padding: 96px 0;
+  }
 }
 
 .all__offer {
@@ -7,11 +20,48 @@
   font-weight: 400;
   margin: 0;
   padding-bottom: 32px;
+  width: fit-content;
+  background-color: #ffffff;
+  position: relative;
+  box-shadow: -40px 0 0 #ffffff, 40px 0 0 #ffffff;
+
+  @media (min-width: $tablet-width) {
+    @include font($secondary-font, 32px, 32px, $head-color);
+    padding-bottom: 66px;
+    width: fit-content;
+    margin-left: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 72px;
+    width: fit-content;
+    margin: 0;
+  }
 }
+
+.all__offer::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100vw;
+  left: -50vw;
+  height: 2px;
+  background-color: $bg-basic-green;
+  box-shadow: 100vw 0 0 $bg-basic-green;
+  transform: translateY(18px);
+}
+
 
 .all__text {
   @include font($secondary-font, 16px, 24px, $head-color);
   text-align: center;
   margin: 0;
   margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    @include font($secondary-font, 24px, 32px, $head-color);
+    padding-left: 38px;
+    padding-right: 38px;
+  }
 }

@@ -7,16 +7,87 @@
   &:first-child {
     border-top: 1px solid #ebebeb;
   }
+
+  @media (min-width: $tablet-width) {
+    background-image: linear-gradient(to bottom, #ffffff 80px, $bg-accent-color 80px);
+    max-width: 324px;
+    max-height: 511px;
+    padding: 20px 37px 40px;
+    border: none;
+    grid-template-areas: "image image" "image image" "title title" "options options" "button button";
+
+    &:first-child {
+      border: none;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 245px;
+    min-height: 511px;
+    padding: 10px 38px 40px;
+  }
+}
+
+.card--secondary {
+  @media (min-width: $tablet-width) {
+    background-image: linear-gradient(to bottom, #ffffff 80px, #ffffff 80px);
+    border: 2px solid $bg-accent-color;
+    margin-top: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 431px;
+  }
 }
 
 .card__link-img {
+  display: block;
   text-decoration: none;
   grid-area: image;
+
+  @media (min-width: $tablet-width) {
+    transform: translateX(27px);
+    width: 200px;
+    height: 210px;
+    display: block;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 169px;
+    height: 210px;
+    transform: none;
+  }
 }
 
+.card__link-img:hover {
+  opacity: 0.5;
+}
+
+.card__link-img:focus-visible {
+  opacity: 0.5;
+}
+
+.card__link-img:active {
+  opacity: 0.3;
+}
+
+
 .card__link-name {
+  display: block;
   text-decoration: none;
   grid-area: title;
+}
+
+.card__link-name:hover {
+  opacity: 0.5;
+}
+
+.card__link-name:focus-visible {
+  opacity: 0.5;
+}
+
+.card__link-name:active {
+  opacity: 0.3;
 }
 
 .card__options {
@@ -28,10 +99,25 @@
 .card__info {
   display: flex;
   justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    max-width: 250px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #cdcdcd;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 169px;
+  }
 }
 
 .card__option {
   @include font($primary-font, 12px, 16px, $base-color-text);
+
+  @media (min-width: $tablet-width) {
+    @include font($primary-font, 16px, 20px, $base-color-text);
+  }
 }
 
 .card__text {
@@ -39,10 +125,24 @@
   text-align: center;
   margin: 0;
   padding: 0 20px 21px;
+
+  @media (min-width: $tablet-width) {
+    @include font($primary-font, 16px, 18px, $base-color-text);
+    padding: 0 40px 82px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    padding-bottom: 90px;
+  }
 }
 
 .card__value {
   @include font($primary-font, 12px, 16px, $base-color-text);
+
+  @media (min-width: $tablet-width) {
+    @include font($primary-font, 16px, 20px, $base-color-text);
+  }
 }
 
 .card__title {
@@ -52,11 +152,37 @@
   text-align: center;
   padding: 0;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    @include font($secondary-font, 20px, 24px, $card-color);
+    max-width: 135px;
+    margin-left: 60px;
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 140px;
+    margin: 0;
+    margin-left: 15px;
+  }
 }
 
 .card__title--secondary {
   display: block;
   padding: 78px 20px 8px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 134px;
+    margin: 0;
+    padding: 120px 0 23px;
+    margin-left: 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+    margin-left: 18px;
+    padding: 144px 0 13px;
+  }
 }
 
 .card__title--secondary::before {
@@ -67,10 +193,17 @@
   height: 30px;
   background-color: #d3d3d3;
   mask-image: url("../../icons/stack.svg#plus");
+  mask-size: 30px 30px;
   mask-repeat: no-repeat;
   mask-position: center;
   cursor: pointer;
   transform: translateX(105px) translateY(-60px);
+
+  @media (min-width: $tablet-width) {
+    width: 60px;
+    height: 60px;
+    transform: translateX(35px) translateY(-120px);
+  }
 }
 
 .card__title--secondary:hover::before {
@@ -84,6 +217,16 @@
 .card__button {
   @include font($secondary-font, 16px, 20px, $white-text);
   min-width: 280px;
-  min-height: 40px;
+  height: 40px;
   grid-area: button;
+
+  @media (min-width: $tablet-width) {
+    min-width: 250px;
+    margin-top: 15px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 169px;
+    margin-top: 32px;
+  }
 }

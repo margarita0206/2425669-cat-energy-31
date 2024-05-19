@@ -80,7 +80,7 @@
             <picture>
               <source width="169" height="210" type="image/png" media="(min-width: 1440px)" srcset="images/chicken-desktop-big@1x.png 1x, images/chicken-desktop-big@2x.png 2x">
               <source width="200" height="210" type="image/png" media="(min-width: 768px)" srcset="images/chicken-big-tablet@1x.png 1x, images/chicken-big-tablet@2x.png 2x">
-              <img class="card__picture" src="images/chicken-mobile@1x.png" srcset="images/chicken-mobile@2x.png 2x" width="140" height="107" alt="Банка со вкусом курицы 1000 грамм">
+              <img class="card__picture" src="images/chicken-big-mobile@1x.png" srcset="images/chicken-big-mobile@2x.png 2x" width="140" height="107" alt="Банка со вкусом курицы 1000 грамм">
             </picture>
           </a>
           <a class="card__link-name" href="#">
@@ -237,7 +237,7 @@
           </dl>
           <a class="card__button button" href="#">Заказать</a>
         </li>
-        <li class="catalog__item card">
+        <li class="catalog__item card card--secondary">
           <div class="card__options-secondary">
             <h3 class="card__title card__title--secondary">Показать еще 100500 товаров</h3>
             <p class="card__text">На самом деле вкусов гораздо больше!</p>
@@ -251,34 +251,42 @@
         <h2 class="additional__text">Дополнительные товары</h2>
         <ul class="additional__list">
           <li class="additional__item">
-            <h3 class="additional__name">Сахарозаменитель</h3>
-            <div class="additional__separator">
-              <span class="additional__quantity">1 упаковка (100 г)</span>
-              <span class="additional__price">200 &#8381;</span>
+            <div class="additional__item-wrapper">
+              <h3 class="additional__name">Сахарозаменитель</h3>
+              <div class="additional__separator">
+                <span class="additional__quantity">1 упаковка (100 г)</span>
+                <span class="additional__price">200 &#8381;</span>
+              </div>
             </div>
             <a class="additional__button button" href="#">заказать</a>
           </li>
           <li class="additional__item">
-            <h3 class="additional__name">Питьевая вода</h3>
-            <div class="additional__separator">
-              <span class="additional__quantity">5 литров</span>
-              <span class="additional__price">50 &#8381;</span>
+            <div class="additional__item-wrapper">
+              <h3 class="additional__name">Питьевая вода</h3>
+              <div class="additional__separator">
+                <span class="additional__quantity">5 литров</span>
+                <span class="additional__price">50 &#8381;</span>
+              </div>
             </div>
             <a class="additional__button button" href="#">заказать</a>
           </li>
           <li class="additional__item">
-            <h3 class="additional__name">молоко</h3>
-            <div class="additional__separator">
-              <span class="additional__quantity">1 литр</span>
-              <span class="additional__price">100 &#8381;</span>
+            <div class="additional__item-wrapper">
+              <h3 class="additional__name">молоко</h3>
+              <div class="additional__separator">
+                <span class="additional__quantity">1 литр</span>
+                <span class="additional__price">100 &#8381;</span>
+              </div>
             </div>
             <a class="additional__button button" href="#">заказать</a>
           </li>
           <li class="additional__item">
-            <h3 class="additional__name">витамины</h3>
-            <div class="additional__separator">
-              <span class="additional__quantity">1 упаковка (30 г)</span>
-              <span class="additional__price">300 &#8381;</span>
+            <div class="additional__item-wrapper">
+              <h3 class="additional__name">витамины</h3>
+              <div class="additional__separator">
+                <span class="additional__quantity">1 упаковка (30 г)</span>
+                <span class="additional__price">300 &#8381;</span>
+              </div>
             </div>
             <a class="additional__button button" href="#">заказать</a>
           </li>
@@ -289,22 +297,22 @@
       </div>
     </section>
     <section class="all">
-      <h2 class="all__offer">Акции и новинки</h2>
+      <h2 class="all__offer ">Акции и новинки</h2>
       <p class="all__text">Подпишитесь на наши новости и не пропустите ни одного предложения!</p>
-      <div class="form">
-        <form class="form__all" action="https://echo.htmlacademy.ru" method="post">
-          <label class="visually-hidden" for="email">Введите ваш email</label>
-          <input class="form__input" type="email" name="email" id="email" placeholder="кuklachev@gmail.com" required>
-
-          <button class="form__button button" type="submit">Подписаться</button>
-        </form>
-      </div>
+      <form class="form form-email" action="https://echo.htmlacademy.ru" method="post">
+        <label class="visually-hidden" for="email">Введите ваш email</label>
+        <input class="form-email__input" type="email" name="email" id="email" placeholder="кuklachev@gmail.com" required>
+        <button class="form-email__button button" type="submit">Подписаться</button>
+      </form>
     </section>
     <section class="adress">
       <div class="adress__wrapper adress__wrapper--background">
         <h2 class="visually-hidden">Контактная информация</h2>
         <p class="adress__slogan">приглашаем<br> к сотрудничеству<br> дилеров!</p>
-        <p class="adress__text">ул. Большая<br>Конюшенная, д. 19/8<br>Санкт-Петербург</p>
+        <p class="adress__text">
+          <span>ул. Большая Конюшенная, д. 19/8</span>
+          <span>Санкт-Петербург</span>
+        </p>
       </div>
       <div class="map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d999.3018932694903!2d30.321759938974047!3d59.938716493728826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1712826306845!5m2!1sru!2sru" width="320" height="362" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -336,9 +344,8 @@
         </li>
       </ul>
     </div>
-    <a class="main-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noreferrer noopener" aria-label="Сайт HTML Academy">
+    <a class="main-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive" target="_blank" rel="noreferrer noopener">
       HTML Academy
-      <div class="copyright__logo-icon"></div>
     </a>
   </footer>
 </body>

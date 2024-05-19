@@ -3,9 +3,10 @@
   margin: 0;
   padding: 0;
   text-align: center;
+  min-width: 320px;
 
   @media (min-width: $tablet-width) {
-    min-width: 436px;
+    width: 436px;
     min-height: 36px;
     display: flex;
     justify-content: space-between;
@@ -31,16 +32,27 @@
   border-top: 1px solid #e6e6e6;
 
   @media (min-width: $tablet-width) {
-    border: none;
+    border-top: none;
     padding: 0;
     padding-bottom: 12px;
     padding-top: 14px;
   }
 }
 
+.site-list__item--current {
+  @media (min-width: $tablet-width) {
+    border-bottom: 2px solid $bg-basic-green;
+  }
+}
 
-@media (min-width: $tablet-width) {
-  .site-list__item--current {
-    border-bottom: 2px solid #68b738;
+.site-list__link--index {
+  @media (min-width: $desktop-width) {
+    color: $white-text;
+  }
+}
+
+.site-list__item--index {
+  @media (min-width: $desktop-width) {
+    border-bottom: 2px solid #ffffff;
   }
 }
