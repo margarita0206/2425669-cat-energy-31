@@ -12,50 +12,48 @@
   }
 }
 
-.social__link {
+.social__link::before {
   @include font($secondary-font, 14px, 20px, $head-color);
   text-decoration: none;
   display: block;
   width: 28px;
   height: 22px;
+  background-color: $bg-accent-color;
+  content: "";
+  mask-position: center;
+  mask-repeat: no-repeat;
 }
 
-.social__link--vk {
+.social__link--vk::before {
   mask-image: url("../../icons/stack.svg#vk-social");
-  mask-repeat: no-repeat;
-  mask-position: center;
   background-color: #666666;
 }
 
-.social__link--youtube {
+.social__link--youtube::before {
   mask-image: url("../../icons/stack.svg#youtube-social");
-  mask-repeat: no-repeat;
-  mask-position: center;
   background-color: #666666;
 }
 
-.social__link--telegram {
+.social__link--telegram::before {
   mask-image: url("../../icons/stack.svg#telegram-social");
-  mask-repeat: no-repeat;
-  mask-position: center;
   background-color: #666666;
 }
 
-.social__link:hover {
+.social__link:hover::before {
   background-color: $bg-basic-green;
 }
 
-.social__link:focus-visible {
+.social__link:focus-visible::before {
   background-color: $bg-basic-green;
 }
 
-.social__link:active {
+.social__link:active::before {
   opacity: 0.3;
 }
 
 .main-footer__social {
-  min-width: 280px;
   border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     border: none;
