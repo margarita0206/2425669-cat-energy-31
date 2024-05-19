@@ -1,3 +1,11 @@
+.adress {
+  position: relative;
+
+  @media (min-width: $desktop-width) {
+    max-height: 400px;
+  }
+}
+
 .adress__wrapper {
   min-width: 280px;
   margin: 0 auto;
@@ -8,10 +16,25 @@
   @media (min-width: $tablet-width) {
     padding: 61px 70px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 60px 78px 60px 80px;
+    min-width: 565px;
+    max-height: 199px;
+    position: absolute;
+    z-index: 1;
+    bottom: 0%;
+    margin: 95px 765px 106px 110px;
+    background-color: #ffffff;
+  }
 }
 
 .adress__wrapper--background {
   background-color: $bg-accent-color;
+
+  @media (min-width: $desktop-width) {
+    background-color: #ffffff;
+  }
 }
 
 .adress__slogan {
@@ -28,8 +51,16 @@
 .adress__text {
   @include font($primary-font, 14px, 20px, $base-color-text);
   margin: 0;
+  max-width: 140px;
+  min-height: 60px;
 
   @media (min-width: $tablet-width) {
     @include font($primary-font, 16px, 20px, $base-color-text);
+    text-align: right;
+    max-width: 157px;
+    min-height: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
   }
 }

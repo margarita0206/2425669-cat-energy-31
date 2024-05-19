@@ -1,8 +1,137 @@
 .slider {
   position: relative;
+  margin: 0 auto;
+  width: 280px;
+  height: 256px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @media (min-width: $tablet-width) {
+    width: 560px;
+    height: 512px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 0 224px;
+  }
+}
+
+.slider__foto {
+  height: 256px;
+  display: block;
+  max-width: 280px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 560px;
+    height: 512px;
+  }
+}
+
+.slider__wrapper-before {
+  width: 140px;
+  overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    width: 280px;
+  }
+}
+
+
+.slider__foto-after {
+  transform: translateX(-50%);
 }
 
 .slider__wrapper-after {
+  width: 140px;
+  overflow-x: hidden;
+
+  @media (min-width: $tablet-width) {
+    width: 280px;
+  }
+}
+
+.slider__curtain {
+  content: "";
+  display: block;
   position: absolute;
-  top: 10px;
+  width: 4px;
+  height: 100%;
+  background-color: #666666;
+  border: none;
+  border-radius: 2px;
+  z-index: 1;
+  padding: 0;
+  top: 0;
+  left: 140px;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    left: 280px;
+  }
+}
+
+.slider__curtain:hover {
+  background: $bg-basic-green;
+}
+
+.slider__curtain:active {
+  background: rgba(94, 170, 47, 0.6);
+}
+
+.slider__curtain::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 2px solid #666666;
+  left: -18px;
+  top: 105px;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    top: 230px;
+  }
+}
+
+.slider__curtain:hover::before {
+  border: 2px solid $bg-basic-green;
+}
+
+.slider__curtain:active::before {
+  border: 2px solid rgba(94, 170, 47, 0.6);
+}
+
+.slider__curtain:focus-visible::before {
+  border: 2px solid $bg-basic-green;
+}
+
+.slider__curtain::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 24px;
+  height: 18px;
+  background-color: #666666;
+  mask-image: url("../../icons/stack.svg#slider-arrows");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  top: 116px;
+  left: -10px;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    top: 241px;
+  }
+}
+
+.slider__curtain:hover::after {
+  background-color: $bg-basic-green;
+}
+
+.slider__curtain:active::after {
+  background-color: rgba(94, 170, 47, 0.6);
 }
