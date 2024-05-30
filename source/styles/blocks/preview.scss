@@ -2,6 +2,9 @@
   list-style-type: none;
   padding: 25px 20px 20px;
   margin: 0;
+  flex-wrap: wrap;
+  display: flex;
+  gap: 20px;
 
   @media (min-width: $tablet-width) {
     min-width: 708;
@@ -41,7 +44,6 @@
 
 .preview__item--slim {
   background-color: $bg-accent-color;
-  margin-bottom: 20px;
   display: block;
 
   @media (min-width: $tablet-width) {
