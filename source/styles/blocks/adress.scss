@@ -1,15 +1,19 @@
-.adress {
+.adress__content {
   position: relative;
 
   @media (min-width: $desktop-width) {
-    max-height: 400px;
+    min-width: 100%;
+    min-height: 400px;
+    display: grid;
+    grid-template-rows: 95px auto auto;
+    grid-template-columns: auto 565px 90px 565px auto;
   }
 }
 
 .adress__wrapper {
   min-width: 280px;
   margin: 0 auto;
-  padding: 26px 20px;
+  padding: 28px 20px 26px;
   display: flex;
   justify-content: space-between;
 
@@ -18,14 +22,13 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding: 60px 78px 60px 80px;
-    min-width: 565px;
-    max-height: 199px;
-    position: absolute;
-    z-index: 1;
-    bottom: 0%;
-    margin: 95px 765px 106px 110px;
+    z-index: 2;
+    padding: 60px 80px;
+    width: 565px;
+    min-height: 199px;
+    grid-area: 2 / 2 / 3 / 3;
     background-color: #ffffff;
+    gap: 87px;
   }
 }
 
@@ -33,9 +36,11 @@
   background-color: $bg-accent-color;
 
   @media (min-width: $desktop-width) {
+    padding: 69px 80px 60px;
     background-color: #ffffff;
   }
 }
+
 
 .adress__slogan {
   @include font($secondary-font, 16px, 20px, $head-color);
@@ -45,6 +50,7 @@
 
   @media (min-width: $tablet-width) {
     @include font($secondary-font, 20px, 26px, $head-color);
+    max-width: 250px;
   }
 }
 
@@ -62,5 +68,49 @@
     display: flex;
     flex-direction: column;
     gap: 19px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
+.adress__map {
+  background-image:
+    image-set(
+      url("../../images/map@1x.webp") type("image/jpg") 1x,
+      url("../../images/map@2x.webp") type("image/jpg") 2x,
+      url("../../images/map@1x.jpg") type("image/jpg") 1x,
+      url("../../images/map@2x.jpg") type("image/jpg") 2x
+    );
+  background-repeat: no-repeat;
+  background-position: 50% 0, 50% 0;
+  background-size: 320px 362px;
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    background-size: 320px 400px;
+    min-width: 100%;
+    min-height: 400px;
+    height: 100%;
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-area: 1 / 1 / 6 / 6;
+  }
+}
+
+.adress__map iframe {
+  display: block;
+  border: none;
+  min-width: 100%;
+
+  @media (min-width: $tablet-width) {
+    min-height: 400px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-height: 400px;
+    height: 100%;
   }
 }
