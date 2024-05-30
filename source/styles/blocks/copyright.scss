@@ -1,23 +1,8 @@
-.copyright {
-  @include font($primary-font, 16px, 20px, $base-color-text);
-  text-decoration: none;
-  min-width: 280px;
-  display: flex;
-  justify-content: space-between;
-  gap: 140px;
-
-  @media (min-width: $tablet-width) {
-    min-width: 168px;
-    padding: 0;
-    gap: 23px;
-  }
-}
-
 .copyright::after {
   content: "";
   display: block;
-  width: 27px;
-  height: 34px;
+  min-width: 27px;
+  min-height: 34px;
   background-color: #666666;
   mask-image: url("../../icons/stack.svg#html-academy");
   mask-repeat: no-repeat;

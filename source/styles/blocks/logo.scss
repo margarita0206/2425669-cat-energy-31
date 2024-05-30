@@ -1,3 +1,10 @@
+.logo__link-footer {
+  display: block;
+  width: 128px;
+  height: 24px;
+  padding-top: 4px;
+}
+
 .logo__link-footer:focus-visible {
   color: #3e3e3e;
 }
@@ -8,4 +15,42 @@
 
 .logo__link-footer:active {
   color: #6b6b6b;
+}
+
+.logo__name {
+  @media (min-width: $desktop-width) {
+    width: 130px;
+    padding-top: 9px;
+  }
+}
+
+.logo__name:hover {
+  opacity: 0.8;
+}
+
+.logo__name:focus-visible {
+  opacity: 0.8;
+}
+
+.logo__name:active {
+  opacity: 0.6;
+}
+
+.logo__name--catalog {
+  @media (min-width: $desktop-width) {
+    width: 128px;
+    padding-top: 5px;
+  }
+}
+
+.logo__image:hover {
+  opacity: 0.8;
+}
+
+.logo__image:focus-visible {
+  opacity: 0.8;
+}
+
+.logo__image:active {
+  opacity: 0.6;
 }
