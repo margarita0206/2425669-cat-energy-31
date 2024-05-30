@@ -1,34 +1,7 @@
-.card {
-  display: grid;
-  grid-template-areas: "image title" "image options" "button button";
-  padding: 20px 20px 25px;
-  border-bottom: 1px solid #ebebeb;
-
-  &:first-child {
-    border-top: 1px solid #ebebeb;
-  }
-
-  @media (min-width: $tablet-width) {
-    background-image: linear-gradient(to bottom, #ffffff 80px, $bg-accent-color 80px);
-    max-width: 324px;
-    max-height: 511px;
-    padding: 20px 37px 40px;
-    border: none;
-    grid-template-areas: "image image" "image image" "title title" "options options" "button button";
-
-    &:first-child {
-      border: none;
-    }
-  }
-
-  @media (min-width: $desktop-width) {
-    max-width: 245px;
-    min-height: 511px;
-    padding: 10px 38px 40px;
-  }
-}
-
 .card--secondary {
+  grid-template-columns: 1fr;
+  grid-template-areas: none;
+
   @media (min-width: $tablet-width) {
     background-image: linear-gradient(to bottom, #ffffff 80px, #ffffff 80px);
     border: 2px solid $bg-accent-color;
@@ -46,7 +19,7 @@
   grid-area: image;
 
   @media (min-width: $tablet-width) {
-    transform: translateX(27px);
+    transform: translate(25px, 10px);
     width: 200px;
     height: 210px;
     display: block;
@@ -55,7 +28,7 @@
   @media (min-width: $desktop-width) {
     width: 169px;
     height: 210px;
-    transform: none;
+    transform: translate(0, 10px);
   }
 }
 
@@ -71,11 +44,16 @@
   opacity: 0.3;
 }
 
-
 .card__link-name {
   display: block;
   text-decoration: none;
   grid-area: title;
+  max-width: 76px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 135px;
+    text-align: center;
+  }
 }
 
 .card__link-name:hover {
@@ -94,6 +72,16 @@
   margin: 0;
   padding: 0;
   grid-area: options;
+  margin-top: -6px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 20px;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 22px;
+  }
 }
 
 .card__info {
@@ -105,10 +93,19 @@
     padding-top: 5px;
     padding-bottom: 5px;
     border-bottom: 1px solid #cdcdcd;
+
+    &:first-of-type {
+      padding-top: 0;
+    }
   }
 
   @media (min-width: $desktop-width) {
     max-width: 169px;
+    padding-bottom: 6px;
+
+    &:last-of-type {
+      padding-bottom: 9px;
+    }
   }
 }
 
@@ -152,57 +149,60 @@
   text-align: center;
   padding: 0;
   margin: 0;
+  margin-left: -5px;
 
   @media (min-width: $tablet-width) {
     @include font($secondary-font, 20px, 24px, $card-color);
-    max-width: 135px;
-    margin-left: 60px;
-    margin-bottom: 15px;
+    min-width: 140px;
+    text-align: center;
+    margin-top: 32px;
+    margin-left: 56px;
   }
 
   @media (min-width: $desktop-width) {
     max-width: 140px;
     margin: 0;
-    margin-left: 15px;
+    margin-left: 13px;
+    margin-top: 24px;
   }
 }
 
 .card__title--secondary {
-  display: block;
-  padding: 78px 20px 8px;
+  padding: 0 24px 8px 31px;
 
   @media (min-width: $tablet-width) {
-    min-width: 134px;
+    max-width: 134px;
     margin: 0;
-    padding: 120px 0 23px;
-    margin-left: 57px;
+    padding: 51px 0 23px;
+    margin-left: 53px;
   }
 
   @media (min-width: $desktop-width) {
     margin: 0;
-    margin-left: 18px;
-    padding: 144px 0 13px;
+    margin-left: 12px;
+    padding: 50px 0 24px;
   }
 }
 
 .card__title--secondary::before {
   content: "";
   display: block;
-  position: absolute;
-  width: 30px;
+  padding-top: 58px;
   height: 30px;
-  background-color: #d3d3d3;
-  mask-image: url("../../icons/stack.svg#plus");
-  mask-size: 30px 30px;
-  mask-repeat: no-repeat;
-  mask-position: center;
+  background-image: url("../../icons/stack.svg#plus");
+  background-size: 30px 30px;
+  background-repeat: no-repeat;
+  background-position: calc(50% - 1px) top;
   cursor: pointer;
-  transform: translateX(105px) translateY(-60px);
 
   @media (min-width: $tablet-width) {
-    width: 60px;
-    height: 60px;
-    transform: translateX(35px) translateY(-120px);
+    background-size: 60px 60px;
+    padding-top: 110px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 100px;
+    background-position: calc(50% - 0px) top;
   }
 }
 
@@ -217,16 +217,17 @@
 .card__button {
   @include font($secondary-font, 16px, 20px, $white-text);
   min-width: 280px;
-  height: 40px;
+  min-height: 40px;
   grid-area: button;
+  padding: 10px;
 
   @media (min-width: $tablet-width) {
     min-width: 250px;
-    margin-top: 15px;
+    margin-top: 33px;
   }
 
   @media (min-width: $desktop-width) {
     min-width: 169px;
-    margin-top: 32px;
+    margin-top: 33px;
   }
 }
