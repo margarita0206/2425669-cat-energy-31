@@ -43,6 +43,12 @@
   }
 }
 
+.logo__name--desktop {
+  @media (min-width: $desktop-width) {
+    width: 130px;
+  }
+}
+
 .logo__image:hover {
   opacity: 0.8;
 }

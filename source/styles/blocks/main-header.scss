@@ -92,14 +92,11 @@
     opacity: 0.3;
   }
 
-  @media (min-width: $tablet-width) {
+  &--nojs {
     display: none;
   }
-}
 
-
-@media (max-width: $mobile-width-only) {
-  .main-header__toggle--nojs .main-header__toggle {
+  @media (min-width: $tablet-width) {
     display: none;
   }
 }
@@ -156,6 +153,12 @@
     display: block;
     width: 100%;
     background-color: #ffffff;
+  }
+
+  .main-header__nav--nojs .main-header__nav-list {
+    position: static;
+    display: block;
+    min-height: auto;
   }
 
   .main-header__nav--closed .site-list__item {

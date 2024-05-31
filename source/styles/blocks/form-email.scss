@@ -1,0 +1,47 @@
+.form-email__input {
+  @include font( $secondary-font, 20px, 30px, $base-color-text);
+  text-transform: uppercase;
+  padding: 13px;
+  min-width: 280px;
+  border: 1px solid #e7e7e7;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding: 13px;
+    min-width: 376px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 496px;
+  }
+}
+
+.form-email__input:hover {
+  border: 1px solid #cdcdcd;
+}
+
+.form-email__input:focus-visible {
+  outline: 2px solid $base-color-text;
+}
+
+.form-email__input:user-invalid {
+  border: 2px solid #ff8282;
+}
+
+.form-email__button {
+  @include font($secondary-font, 20px, 26px, $white-text);
+  padding: 15px 0;
+  min-width: 280px;
+  min-height: 58px;
+  display: block;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    min-width: 256px;
+    min-height: 56px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 256px;
+  }
+}
