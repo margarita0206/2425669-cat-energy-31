@@ -20,8 +20,8 @@
   border: 1px solid #cdcdcd;
 }
 
-.form-email__input:focus {
-  border: 2px solid $base-color-text;
+.form-email__input:focus-visible {
+  outline: 2px solid $base-color-text;
 }
 
 .form-email__input:user-invalid {
